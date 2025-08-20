@@ -13,7 +13,7 @@ app.use(router)
 
 
 // 使用Vue提供的app.config.errorHandlerAPI捕获错误，可以打印错误对象err和组件实例vm
-app.config.errorHandler = (err: any, vm) => {
+app.config.errorHandler = (err: any, vm: any) => {
     // console.log('Error', err)
     // console.log('VM', vm)
     const errorStack = ErrorStackParser.parse(err as Error);
@@ -27,7 +27,6 @@ app.config.errorHandler = (err: any, vm) => {
         line: err.line,
         column: err.column
     }
-
     vm!.$message.error(`您触发了一个${err.name} 错误`)
     localStorage.setItem('jsErrorList', JSON.stringify(jsError))
 }
