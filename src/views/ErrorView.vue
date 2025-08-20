@@ -10,9 +10,10 @@
 
 <script setup lang="ts">
 const triggerTypeError = () => {
-  if (typeError.length > 0) {
-    console.log("err!");
-  }
+  // if (typeError.length > 0) {
+  //   console.log("err!");
+  // }
+  throw new Error('TypeError');
 };
 const triggerReferenceError = () => {
   throw new ReferenceError('Hello');
