@@ -8,10 +8,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   base: './',
   plugins: [vue(), vueJsx()],
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    emptyOutDir: true
+  build: { // 开发打包配置
+    outDir: 'dist', // 打包输出目录
+    sourcemap: true, // 生成sourcemap文件
+    emptyOutDir: true, // 打包前清空输出目录
     // rollupOptions: {
     //   input: ['src/index.html']
     // }
