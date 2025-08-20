@@ -1,0 +1,2 @@
+import{d as l,c as p,a as e,b as t,r as c,o as E}from"./index-DmieXcur.js";const d={class:"about"},w=l({__name:"ErrorView",setup(m){const s=()=>{throw new Error("TypeError")},i=()=>{throw new ReferenceError("Hello")},a=()=>{throw new SyntaxError("Hello")};return(f,r)=>{const o=c("el-divider");return E(),p("div",d,[e("p",{onClick:r[0]||(r[0]=n=>s())},"触发TypeError"),t(o),e("p",{onClick:r[1]||(r[1]=n=>i())},"触发ReferenceError"),t(o),e("p",{onClick:r[2]||(r[2]=n=>a())},"触发SyntaxError")])}}});export{w as default};
+//# sourceMappingURL=ErrorView-B_lxK5j1.js.map
