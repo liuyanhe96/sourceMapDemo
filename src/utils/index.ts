@@ -1,5 +1,5 @@
 import axios  from 'axios';
-import sourceMap from 'source-map';
+import sourceMap from 'source-map-js';
 // 工具函数：在utils目录下创建工具函数处理source map关联逻辑
 
 // 核心库：使用mozilla的source-map库（版本0.7.4）实现源码定位
@@ -20,7 +20,7 @@ const findCodeBySourceMap = async (stackFrame: any) => {
     const sourceData: any = await getSourceMap(stackFrame.fileName + '.map')
     const fileContent = sourceData.data
     // 解析map文件
-    const consumer = await new sourceMap.SourceMapConsumer(fileContent);
+    const consumer = await new sourceMap.SourceMapConsumer(fileContent)
 
     // 通过报错位置查找到对应的源文件名称以及报错行数
     // 接收包含line和column属性的对象参数，返回原始源代码的位置信息。
